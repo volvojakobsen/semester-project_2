@@ -1,0 +1,28 @@
+{
+  "name": "semester-project_2",
+  "version": "1.0.0",
+  "description": "a fake auction site for a study project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volvojakobsen/semester-project_2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/volvojakobsen/semester-project_2/issues"
+  },
+  "homepage": "https://github.com/volvojakobsen/semester-project_2#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}

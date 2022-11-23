@@ -1,0 +1,10 @@
+@import "variables.scss";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$primary: #8bdb7d;
+$post: #59d936;
+
+.salat {
+    color: $post;
+}
