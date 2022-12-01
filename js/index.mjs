@@ -1,4 +1,5 @@
-export * from "./items/index.mjs";
-import { displayItems } from "./handlers/displayItems.mjs";
+import router from "./router.mjs";
 
-displayItems();
+
+
+router();

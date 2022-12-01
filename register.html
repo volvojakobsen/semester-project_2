@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/css/custom.css" />
+    <script src="./js/index.mjs" type="module" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Auction-bay</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm">PROFILE</button>
+        <button type="button" class="btn btn-primary btn-sm m-2">LOGIN</button>
+      </nav>
+    </header>
+    <div class="row">
+      <div
+        class="sidebar col d-flex flex-column col-2 m-2 rounded align-items-md-center"
+      >
+        <p class="m-2">username</p>
+        <h2 class="m-2">credits</h2>
+        <p>ammount</p>
+        <p>my bids</p>
+      </div>
+      <div class="middle col-9 m-6">
+        <div
+          class="register col-9 m-2 d-flex justify-content-center align-items-center"
+        >
+          <form action="./profile.html" id="register_form" method="post">
+            <div class="mb-3 d-flex flex-column o-center" style="height: 80vh">
+              <h1>Please register</h1>
+              <p class="my-1">username must be at least 8 characters long</p>
+              <div
+                class="d-flex my-3 align-items-center justify-content-center"
+                style="width: 50%"
+              >
+                <input
+                  type="name"
+                  name="name"
+                  pattern="^[\w]+$"
+                  title="User name must only contain lower case and upper case letters, numbers and underscore (_). Example: My_user123. The username must also be at least 8 characters long."
+                  class="form-control register_username"
+                  id="exampleUserName"
+                  aria-describedby="emailHelp"
+                  minlength="8"
+                  placeholder="username"
+                  required
+                />
+              </div>
+              <p class="my-1">
+                email must be a valid noroff student mail address
+              </p>
+              <div
+                class="d-flex my-3 align-items-center justify-content-center"
+                style="width: 50%"
+              >
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control register_email"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                  title="Only @(stud)noroff.no are allowed to register."
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <p class="my-1">password must be at least 8 characters long</p>
+              <div class="d-flex my-1" style="width: 50%">
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control register_password"
+                  id="exampleInputPassword1"
+                  minlength="8"
+                  aria-describedby="passwordHelp"
+                  placeholder="password"
+                  required
+                />
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary register_submit">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

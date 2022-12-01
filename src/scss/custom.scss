@@ -4,7 +4,12 @@
 
 $primary: #8bdb7d;
 $side: #4550509f;
+$forms: #1bb9b9c4;
 
 .sidebar {
-    background-color: $side;
+  background-color: $side;
+}
+
+.register {
+  background-color: $forms;
 }
