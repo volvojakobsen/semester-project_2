@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/css/custom.css" />
-    <script src="./js/items/get.mjs" type="module" defer></script>
+    <script src="./js/index.mjs" type="module" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -42,14 +42,16 @@
         <button type="button" class="btn btn-primary btn-sm m-2">LOGIN</button>
       </nav>
     </header>
-    <div
-      class="sidebar col d-flex flex-column col-2 m-2 rounded align-items-md-center justify-content-md-center"
-    >
-      <p class="m-2">username</p>
-      <h2 class="m-2">credits</h2>
-      <p>ammount</p>
-      <p>my bids</p>
+    <div class="row">
+      <div
+        class="sidebar col d-flex flex-column col-2 m-2 rounded align-items-md-center"
+      >
+        <p class="m-2">username</p>
+        <h2 class="m-2">credits</h2>
+        <p>ammount</p>
+        <p>my bids</p>
+      </div>
+      <div class="listings col-9 row m-6"></div>
     </div>
-    <div class="listings"></div>
   </body>
 </html>
