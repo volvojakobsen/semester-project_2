@@ -1,5 +1,5 @@
 import { API_AUCTION_URL } from "../constants.mjs";
-import * as storage from "../../handlers/storage/index.mjs"
+import * as storage from "../../handlers/storage/index.mjs";
 
 const action = "/auth/register";
 const method = "post";
