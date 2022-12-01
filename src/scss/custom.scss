@@ -3,8 +3,8 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 $primary: #8bdb7d;
-$post: #59d936;
+$side: #4550509f;
 
-.salat {
-    color: $post;
+.sidebar {
+    background-color: $side;
 }
