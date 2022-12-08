@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/css/custom.css" />
+    <script src="./js/index.mjs" type="module" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Auction-bay</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm">PROFILE</button>
+        <a href="./login.html">
+          <button
+            type="button"
+            class="btn btn-primary btn-sm m-2"
+            id="nav_login"
+          >
+            LOGIN
+          </button>
+        </a>
+      </nav>
+    </header>
+    <div class="row">
+      <div
+        class="sidebar col d-flex flex-column col-2 m-2 rounded align-items-md-center"
+      >
+        <p class="m-2">username</p>
+        <h2 class="m-2">credits</h2>
+        <p>ammount</p>
+        <p>my bids</p>
+      </div>
+      <div class="middle col-9 m-6">
+        <nav class="navbar navbar-light bg-light">
+          <a class="navbar-brand">Listings Menu</a>
+          <a href="createItem.html"
+            ><button type="button" class="btn btn-outline-success">
+              New entry
+            </button></a
+          >
+          <form class="form-inline">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </nav>
+        <div class="listings col-9 row m-6"></div>
+      </div>
+    </div>
+  </body>
+</html>

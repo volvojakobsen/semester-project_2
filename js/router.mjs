@@ -37,6 +37,9 @@ export default function router() {
         case `/removeItem.html`:
             listeners.setDeleteItemListener()
             return;
+        case `/singleItem.html`:
+            listeners.displayItemListener()
+            return;
     }
 
 

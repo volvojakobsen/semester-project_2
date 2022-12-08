@@ -25,9 +25,11 @@ export async function displayItems() {
               <li class="list-group-item">Vestibulum at eros</li>
             </ul>
             <div class="card-body">
+              <a href="singleItem.html?id=${items[i].id}"><button type="button"  class="btn btn-primary"">View Item</button></a>
               <a href="updateItem.html?id=${items[i].id}" class="card-link"><button type="button" class="btn btn-outline-success">Update</button></a>
               <a href="removeItem.html?id=${items[i].id}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
             </div>
+            <div><form><input type="number"></input><button type="submit">Bid</button></form></div>
           </div>`
       }
       else {
@@ -43,8 +45,7 @@ export async function displayItems() {
               <li class="list-group-item">Vestibulum at eros</li>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+            <a href="singleItem.html?id=${items[i].id}"><button type="button"  class="btn btn-primary"">View Item</button></a>
             </div>
           </div>`
       }

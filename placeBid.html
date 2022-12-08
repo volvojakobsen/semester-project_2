@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/css/custom.css" />
+    <script src="./js/index.mjs" type="module" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Auction-bay</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm">PROFILE</button>
+        <button type="button" class="btn btn-primary btn-sm m-2">LOGIN</button>
+      </nav>
+    </header>
+    <div class="row">
+      <div
+        class="sidebar col d-flex flex-column col-2 m-2 rounded align-items-md-center"
+      >
+        <p class="m-2">username</p>
+        <h2 class="m-2">credits</h2>
+        <p>ammount</p>
+        <p>my bids</p>
+      </div>
+      <div class="middle col-9 m-6">
+        <div
+          class="register col-9 m-2 d-flex justify-content-center align-items-center"
+        >
+          <form class="reatePost" id="updateItem">
+            <div class="container d-flex flex-column front-form my-3">
+              <h1 class="text-center">Write a new post</h1>
+              <label for="subject" class="form-label">Title</label>
+              <input
+                type="text"
+                name="title"
+                class="form-control form-title"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+              <label for="description" class="form-label">Description</label>
+              <textarea
+                name="description"
+                id="message"
+                cols="30"
+                rows="10"
+                class="form__input form-body text_area mb-3"
+                placeholder="message"
+              ></textarea>
+              <button type="submit" class="btn mb-3 btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
