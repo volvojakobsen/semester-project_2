@@ -15,7 +15,7 @@ export function setCreateItemFormListener() {
             console.log(item)
             createItem(item);
             alert("your item has been listed for auction.");
-            //location.href = `/index.html`;
+            location.href = `/`;
         })
     }
 

@@ -1,4 +1,8 @@
-const listURL = "https://api.noroff.dev/api/v1/auction/listings"
+import { API_AUCTION_URL } from "../API/constants.mjs";
+import { authFetch } from "../API/authFetch.mjs";
+
+const listURL = "https://api.noroff.dev/api/v1/auction/listings?sort=created&sortOrder=desc&_seller=true&_bids=true"
+const action = "/listings";
 
 export async function getListings() {
 
@@ -7,5 +11,16 @@ export async function getListings() {
     return await response.json();
 };
 
+export async function getlisting(id) {
+    if (!id) {
+        throw new Error("get requires a listings id");
+    }
 
+    const getItemURL = `${API_AUCTION_URL}${action}/${id}`;
+
+    const response = await authFetch(getItemURL)
+
+
+    return await response.json();
+};
 

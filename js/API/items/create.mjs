@@ -5,14 +5,14 @@ import { authFetch } from "../authFetch.mjs";
 import { load } from "../../handlers/storage/index.mjs";
 
 const action = "/listings";
-const method = "post";
+const method = "POST";
 const token = load("token");
 /**
  * sends the users input to the post API and fetching the result.
  * @param {string} postData from input fields in form.
  * @returns {Array} json response.
  */
-export async function createItem(itemData) {
+export async function createItem(item) {
     const createItemURL = API_AUCTION_URL + action;
 
     const response = await authFetch(createItemURL, {
@@ -21,7 +21,7 @@ export async function createItem(itemData) {
             "Authorization": `bearer ${token}`
         },
         method,
-        body: JSON.stringify(itemData)
+        body: JSON.stringify(item)
     })
 
 

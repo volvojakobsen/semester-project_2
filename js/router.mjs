@@ -31,6 +31,12 @@ export default function router() {
         case `/createItem.html`:
             listeners.setCreateItemFormListener()
             return;
+        case `/updateItem.html`:
+            listeners.setUpdateItemListener()
+            return;
+        case `/removeItem.html`:
+            listeners.setDeleteItemListener()
+            return;
     }
 
 
