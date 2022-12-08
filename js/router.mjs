@@ -28,6 +28,9 @@ export default function router() {
         case `/login.html`:
             listeners.setLoginFormListener()
             return;
+        case `/createItem.html`:
+            listeners.setCreateItemFormListener()
+            return;
     }
 
 

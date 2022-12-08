@@ -11,7 +11,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Auction-bay</a>
+        <a class="navbar-brand" href="index.html">Auction-bay</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -39,15 +39,7 @@
           </ul>
         </div>
         <button type="button" class="btn btn-secondary btn-sm">PROFILE</button>
-        <a href="./login.html">
-          <button
-            type="button"
-            class="btn btn-primary btn-sm m-2"
-            id="nav_login"
-          >
-            LOGIN
-          </button>
-        </a>
+        <button type="button" class="btn btn-primary btn-sm m-2">LOGIN</button>
       </nav>
     </header>
     <div class="row">
@@ -60,26 +52,35 @@
         <p>my bids</p>
       </div>
       <div class="middle col-9 m-6">
-        <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand">Listings Menu</a>
-          <a href="createItem.html"
-            ><button type="button" class="btn btn-outline-success">
-              New entry
-            </button></a
-          >
-          <form class="form-inline">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
+        <div
+          class="register col-9 m-2 d-flex justify-content-center align-items-center"
+        >
+          <form class="reatePost" id="createItem">
+            <div class="container d-flex flex-column front-form my-3">
+              <h1 class="text-center">Write a new post</h1>
+              <label for="subject" class="form-label">Title</label>
+              <input
+                type="text"
+                name="title"
+                class="form-control form-title"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+              <label for="endsAt" class="form-label">Ending at</label>
+              <input type="datetime-local" name="endsAt" />
+              <label for="description" class="form-label">Description</label>
+              <textarea
+                name="description"
+                id="message"
+                cols="30"
+                rows="10"
+                class="form__input form-body text_area mb-3"
+                placeholder="message"
+              ></textarea>
+              <button type="submit" class="btn mb-3 btn-primary">Submit</button>
+            </div>
           </form>
-        </nav>
-        <div class="listings col-9 row m-6"></div>
+        </div>
       </div>
     </div>
   </body>
