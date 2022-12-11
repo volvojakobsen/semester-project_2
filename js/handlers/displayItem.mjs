@@ -3,6 +3,8 @@ import * as storage from "../handlers/storage/index.mjs";
 
 
 const listingContainer = document.querySelector(".listings");
+const mediaContainer = document.querySelector(".media");
+const inputContainer = document.querySelector(".bidInput");
 /**
  * Takes an id from the querystring and fetches a single post with the id
  */
@@ -32,6 +34,9 @@ export async function displayItemListener() {
           <li class="list-group-item itemID">${items.id}</li>
         </ul>
         </div>`;
+
+        mediaContainer.innerHTML += `<img class="card-img" src="${items.media}" alt="Card image cap"></img>`;
+        inputContainer.placeholder = `${items.bids[items.bids.length - 1].amount + 1}`
 
 
     } catch (error) {

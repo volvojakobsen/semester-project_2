@@ -10766,4 +10766,9 @@ textarea.form-control-lg {
   background-color: rgba(27, 185, 185, 0.768627451);
 }
 
+.card-img {
+  max-width: 800px;
+  height: 100%;
+}
+
 /*# sourceMappingURL=custom.css.map */
