@@ -24,21 +24,28 @@ export default function router() {
             return;
         case `/register.html`:
             listeners.setRegisterFormListener()
+            listeners.isUserLoggedIn()
             return;
         case `/login.html`:
             listeners.setLoginFormListener()
+            listeners.isUserLoggedIn()
             return;
         case `/createItem.html`:
             listeners.setCreateItemFormListener()
+            listeners.isUserLoggedIn()
             return;
         case `/updateItem.html`:
             listeners.setUpdateItemListener()
+            listeners.isUserLoggedIn()
             return;
         case `/removeItem.html`:
             listeners.setDeleteItemListener()
+            listeners.isUserLoggedIn()
             return;
         case `/singleItem.html`:
             listeners.displayItemListener()
+            listeners.bidOnItemFormListener()
+            listeners.isUserLoggedIn()
             return;
     }
 

@@ -1,4 +1,5 @@
 import * as postMethods from "../items/get.mjs";
+import * as storage from "../handlers/storage/index.mjs";
 
 
 const listingContainer = document.querySelector(".listings");
@@ -11,7 +12,8 @@ export async function displayItemListener() {
         const id = url.searchParams.get("id");
         const items = await postMethods.getlisting(id);
         console.log(items.title)
-        listingContainer.innerHTML = `<div class="card m-3" style="width: 30rem;">
+        storage.save("lastBid", items.bids[items.bids.length - 1].amount)
+        listingContainer.innerHTML += `<div class="card m-3" style="width: 30rem;">
         <img class="card-img-top" src="${items.media}" alt="Card image cap">
         <div class="card-body">
         <div class="card-body">
@@ -22,12 +24,13 @@ export async function displayItemListener() {
           <h5 class="card-title">${items.title}</h5>
           <p class="card-text">${items.description}</p>
         </div>
+         <h3>Current bid amount is:</h3>
+         <p>${items.bids[items.bids.length - 1].amount}</p>
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><date>${items.endsAt}</date></li>
           <li class="list-group-item">${items.tags}</li>
-          <li class="list-group-item">Vestibulum at eros</li>
+          <li class="list-group-item itemID">${items.id}</li>
         </ul>
-        <div><form id="bidForm"><input name="bid" type="number"></input><input name="id" type="text" readonly placeholder=${items.id}></input><button type="submit">Bid</button></form></div>
         </div>`;
 
 

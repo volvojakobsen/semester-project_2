@@ -22,5 +22,6 @@ export async function login(profile) {
     storage.save("token", result.accessToken);
     storage.save("name", result.name);
     storage.save("email", result.email);
+    storage.save("credits", result.credits);
     location.href = `./`;
 }

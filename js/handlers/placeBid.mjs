@@ -1,30 +1,55 @@
-import { updateItem } from "../API/items/update.mjs";
-import { getlisting, getListings } from "../items/get.mjs";
+import { load } from "./storage/index.mjs";
+import { API_AUCTION_URL } from "../API/constants.mjs";
+import { authFetch } from "../API/authFetch.mjs";
+import * as arrayMethods from "../items/get.mjs";
 
-/**
- * listens for submit event on update post form. then passes input values to update-post function and redirects user.
- */
-export async function setUpdateItemListener() {
-    const form = document.querySelector("#bidForm");
+const url = new URL(location.href);
+const id = url.searchParams.get("id");
+const action = "/listings/" + id + "/bids";
+const method = "POST";
+const token = load("token");
+console.log(id)
+const form = document.querySelector("#bidForm");
 
-    const url = new URL(location.href);
-    const id = url.searchParams.get("id");
+export function bidOnItemFormListener() {
 
     if (form) {
-        const item = await getlisting(id);
-
-        form.title.value = item.title;
-        form.description.value = item.description;
-
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             const form = event.target;
-            const formData = new FormData(form);
-            const item = Object.fromEntries(formData.entries());
-            item.id = id;
-            updateItem(item);
-            alert("your post has been updated.");
-            //location.href = `/`
+            const amount = parseInt(form.amount.value);
+            const item = {
+                "amount": amount
+            }
+            const items = arrayMethods.getlisting(id);
+
+            if (load("credits") >= amount && amount > load("lastBid")) {
+                bid(item);
+                alert(`your bid of ${amount} credits was placed.`);
+            }
+            else {
+                alert(`your bid must be higher than the latest bid, you also cannot place a bid that is higher than your credit amount`)
+            }
+            //location.href = `/`;
         })
     }
+
+
+}
+
+async function bid(item) {
+    const createItemURL = API_AUCTION_URL + action;
+
+    const response = await authFetch(createItemURL, {
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `bearer ${token}`
+        },
+        method,
+        body: JSON.stringify(item)
+    })
+
+
+    return await response.json();
+}
 
