@@ -5,6 +5,7 @@ import * as storage from "../handlers/storage/index.mjs";
 const listingContainer = document.querySelector(".listings");
 const mediaContainer = document.querySelector(".media");
 const inputContainer = document.querySelector(".bidInput");
+const bidsContainer = document.querySelector(".bidsContainer");
 /**
  * Takes an id from the querystring and fetches a single post with the id
  */
@@ -15,7 +16,7 @@ export async function displayItemListener() {
         const items = await postMethods.getlisting(id);
         console.log(items.title)
         storage.save("lastBid", items.bids[items.bids.length - 1].amount)
-        listingContainer.innerHTML += `<div class="card m-3" style="width: 30rem;">
+        listingContainer.innerHTML += `<div class="card m-3" style="width: 60rem;">
         <img class="card-img-top" src="${items.media}" alt="Card image cap">
         <div class="card-body">
         <div class="card-body">
@@ -35,8 +36,12 @@ export async function displayItemListener() {
         </ul>
         </div>`;
 
-        mediaContainer.innerHTML += `<img class="card-img" src="${items.media}" alt="Card image cap"></img>`;
-        inputContainer.placeholder = `${items.bids[items.bids.length - 1].amount + 1}`
+        // mediaContainer.innerHTML += `<img class="card-img" src="${items.media}" alt="Card image cap"></img>`;
+        inputContainer.placeholder = `${items.bids[items.bids.length - 1].amount + 1}`;
+        for (let i = 0; i < items.bids.length; i++) {
+            bidsContainer.innerHTML += `<li><p>${items.bids[i].bidderName}. placed a bid of ${items.bids[i].amount} credits</p></li>`
+        }
+
 
 
     } catch (error) {

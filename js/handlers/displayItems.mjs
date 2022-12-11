@@ -33,7 +33,7 @@ export async function displayItems() {
           </div>`
       }
       else {
-        listingsContainer.innerHTML += `<div class="card m-3" style="width: 30rem;">
+        listingsContainer.innerHTML += `<a href="singleItem.html?id=${items[i].id}"><div class="card m-3" style="width: 30rem;">
             <img class="card-img-top" src="${items[i].media[0]}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">${items[i].title}</h5>
@@ -47,7 +47,7 @@ export async function displayItems() {
             <div class="card-body">
             <a href="singleItem.html?id=${items[i].id}"><button type="button"  class="btn btn-primary"">View Item</button></a>
             </div>
-          </div>`
+          </div></a>`
       }
 
     }
