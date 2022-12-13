@@ -5,10 +5,13 @@ import * as arrayMethods from "../items/get.mjs";
 
 const url = new URL(location.href);
 const id = url.searchParams.get("id");
+
 const action = "/listings/" + id + "/bids";
 const method = "POST";
 const token = load("token");
-console.log(id)
+
+
+
 const form = document.querySelector("#bidForm");
 
 export function bidOnItemFormListener() {
@@ -30,7 +33,7 @@ export function bidOnItemFormListener() {
             else {
                 alert(`your bid must be higher than the latest bid, you also cannot place a bid that is higher than your credit amount`)
             }
-            //location.href = `/`;
+            location.reload();
         })
     }
 

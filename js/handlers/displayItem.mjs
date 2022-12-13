@@ -37,10 +37,14 @@ export async function displayItemListener() {
         </div>`;
 
         // mediaContainer.innerHTML += `<img class="card-img" src="${items.media}" alt="Card image cap"></img>`;
-        inputContainer.placeholder = `${items.bids[items.bids.length - 1].amount + 1}`;
+        const placeholder = parseInt(items.bids[items.bids.length - 1].amount) + 1;
+        console.log(placeholder);
+
         for (let i = 0; i < items.bids.length; i++) {
             bidsContainer.innerHTML += `<li><p>${items.bids[i].bidderName}. placed a bid of ${items.bids[i].amount} credits</p></li>`
         }
+
+        inputContainer.innerHTML = placeholder;
 
 
 

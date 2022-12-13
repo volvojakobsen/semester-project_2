@@ -21,6 +21,7 @@ export default function router() {
         case `/`:
             listeners.displayItems()
             listeners.isUserLoggedIn()
+
             return;
         case `/register.html`:
             listeners.setRegisterFormListener()
