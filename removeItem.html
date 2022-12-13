@@ -38,39 +38,45 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="btn btn-secondary btn-sm">PROFILE</button>
-        <button type="button" class="btn btn-primary btn-sm m-2">LOGIN</button>
+        <a href="./profile.html">
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm"
+            id="nav_profile"
+          >
+            PROFILE
+          </button>
+        </a>
+        <a href="./login.html"
+          ><button
+            type="button"
+            class="btn btn-primary btn-sm m-2"
+            id="nav_login"
+          >
+            LOGIN
+          </button></a
+        >
       </nav>
     </header>
-    <div class="row">
+    <div class="d-flex justify-content-center align-items-center">
       <div
-        class="sidebar col d-flex flex-column col-2 m-2 rounded align-items-md-center"
+        class="register col-9 m-2 d-flex justify-content-center align-items-center"
       >
-        <p class="m-2">username</p>
-        <h2 class="m-2">credits</h2>
-        <p>ammount</p>
-        <p>my bids</p>
-      </div>
-      <div class="middle col-9 m-6">
-        <div
-          class="register col-9 m-2 d-flex justify-content-center align-items-center"
-        >
-          <form class="reatePost" id="deleteItem">
-            <div class="container d-flex flex-column front-form my-3">
-              <h1 class="text-center">are you sure you want to delete item?</h1>
-              <label for="subject" class="form-label">Id:</label>
-              <input
-                type="text"
-                name="id"
-                class="form-control id-dark form-title"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                readonly
-              />
-              <button type="submit" class="btn my-3 btn-primary">Submit</button>
-            </div>
-          </form>
-        </div>
+        <form class="reatePost" id="deleteItem">
+          <div class="container d-flex flex-column front-form my-3">
+            <h1 class="text-center">are you sure you want to delete item?</h1>
+            <label for="subject" class="form-label">Id:</label>
+            <input
+              type="text"
+              name="id"
+              class="form-control id-dark form-title"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              readonly
+            />
+            <button type="submit" class="btn my-3 btn-primary">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   </body>

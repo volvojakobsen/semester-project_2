@@ -1,19 +1,6 @@
 import * as listeners from "./handlers/index.mjs";
 
 
-/**
- * switches listeners based on the users location path
- * @returns {function} what listener should be active
- * @example 
- * ```js
- * //the user is at location: "./login.html"
- * switch (path) {
- *     case `/login.html`:
- *          listeners.setLoginFormListener()
- *          return;
- * // the listeners.setLoginFormListener() function will now be active.
- * ```
- */
 export default function router() {
     const path = location.pathname;
 
@@ -46,6 +33,14 @@ export default function router() {
         case `/singleItem.html`:
             listeners.displayItemListener()
             listeners.bidOnItemFormListener()
+            listeners.isUserLoggedIn()
+            return;
+        case `/profile.html`:
+            listeners.displayProfileListener()
+            listeners.isUserLoggedIn()
+            return;
+        case `/index.html`:
+            listeners.displayItems()
             listeners.isUserLoggedIn()
             return;
     }

@@ -11,7 +11,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Auction-bay</a>
+        <a class="navbar-brand" href="index.html">Auction-bay</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -38,58 +38,35 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="btn btn-secondary btn-sm">PROFILE</button>
-        <a href="./login.html">
-          <button
-            type="button"
-            class="btn btn-primary btn-sm m-2"
-            id="nav_login"
-          >
-            LOGIN
+        <a href="./profile.html">
+          <button type="button" class="btn btn-secondary btn-sm" id="nav_profile">
+            PROFILE
           </button>
         </a>
+        <a href="./login.html"
+          ><button type="button" class="btn btn-primary btn-sm m-2" id="nav_login">
+            LOGIN
+          </button></a
+        >
       </nav>
     </header>
-    <div class="row">
-      <div
-        class="sidebar col d-flex flex-column col-2 m-2 rounded align-items-md-center"
-      >
-        <p class="m-2">username</p>
-        <h2 class="m-2">credits</h2>
-        <p>ammount</p>
-        <p>my bids</p>
-      </div>
-      <div class="middle col-9 m-6">
-        <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand">Listings Menu</a>
-          <a href="createItem.html"
-            ><button type="button" class="btn btn-outline-success">
-              New entry
-            </button></a
-          >
-          <form class="form-inline">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
-        </nav>
-        <div class="media"></div>
-        <div class="listings col-9 m-6 d-flex justify-content-center"></div>
-        <div class="bid col-9 d-flex justify-content-center">
-            <div">
-            <h3 class="m-3">Place a bid on this item</h3>
-            <div class="m-4"><form id="bidForm"><input class="bidInput" name="amount" type="number"></input><button type="submit" class="btn btn-lg btn-primary">Bid</button></form></div>
-            <h4>Biding Log</h4>
-            <div><ul class="bidsContainer"></ul></div>
-        </div>
+    <main>
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="middle middle_singleItem row m-6">
+            <div class="col-sm media"></div>
+            <div class="listings col-sm m-6 d-flex justify-content-center"></div>
+            <div class="bid col-sm d-flex justify-content-center">
+                <div">
+                <h3 class="m-3">Place a bid on this item</h3>
+                <div class="m-4"><form id="bidForm"><input class="bidInput" name="amount" type="number"></input><button type="submit" class="btn btn-lg btn-primary">Bid</button></form></div>
+                <h4>Biding Log</h4>
+                <div><ul class="bidsContainer"></ul></div>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

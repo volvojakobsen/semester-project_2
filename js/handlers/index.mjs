@@ -7,4 +7,5 @@ export * from "./updateItem.mjs";
 export * from "./removeItem.mjs";
 export * from "./displayItem.mjs";
 export * from "./placeBid.mjs";
+export * from "./displayProfile.mjs";
 
