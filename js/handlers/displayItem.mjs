@@ -56,7 +56,7 @@ export async function displayItemListener() {
         <h3>Current bid is:</h3>
          <p>${items.bids[0].amount} credits</p>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item primary text-center"><h2>Ends at:</h2><date>${items.endsAt}</date></li>
+          <li class="list-group-item text-center"><div class="alert alert-danger"><h2>Ends at:</h2><date>${items.endsAt}</date></div></li>
           <li class="list-group-item primary text-center"><h2>last updated:</h2><date>${items.updated}</date></li>
           <li class="list-group-item primary text-center"><h2>Created at:</h2><date>${items.created}</date></li>
           <li class="list-group-item primary text-center"><h3>Tags</h3><p>${items.tags}</p></li>
