@@ -1,4 +1,5 @@
 import * as listeners from "./handlers/index.mjs";
+import * as profileListeners from "./profile/index.mjs";
 
 
 export default function router() {
@@ -38,6 +39,7 @@ export default function router() {
         case `/profile.html`:
             listeners.displayProfileListener()
             listeners.isUserLoggedIn()
+            profileListeners.updateAvatarFormListener()
             return;
         case `/index.html`:
             listeners.displayItems()

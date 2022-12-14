@@ -5,11 +5,13 @@ const usernameHolder = document.querySelector(".usernameHolder");
 const emailHolder = document.querySelector(".emailHolder");
 const creditsHolder = document.querySelector(".creditsHolder");
 const listingsContainer = document.querySelector(".listings");
+const profileHulder = document.querySelector(".profileImage");
 
 export async function displayProfileListener() {
     let profile = await profileMethod.getProfile();
     console.log(profile);
     usernameHolder.innerHTML = profile.name;
+    profileHulder.src = profile.avatar;
     emailHolder.innerHTML = profile.email;
     creditsHolder.innerHTML = profile.credits;
     storage.save("credits", profile.credits);

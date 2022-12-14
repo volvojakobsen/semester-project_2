@@ -24,24 +24,38 @@ export async function displayItemListener() {
           mediaContainer.innerHTML += `<img class="imageArray m-4 img-fluid" src="${items.media[i]}" alt="Card image cap">`;
         }
       }
-      listingContainer.innerHTML += `<div class="card m-3 d-flex justify-content-center align-items-center">
-      <div class="card-body">
-        <h5 class="card-title m-3">${items.title}</h5>
+      else {
+        for (let i = 0; i < items.media.length; i++) {
+          mediaContainer.innerHTML += `<img class="imageArray m-4 img-fluid" src="${items.media}" alt="Card image cap">`;
+        }
+      }
+      listingContainer.innerHTML += `<div class="card m-1 primary">
+      <div class="card-body text-center">
+        <h1 class="card-title m-3">${items.title}</h1>
         <p class="card-text m-3">${items.description}</p>
       </div>
-       <h3>Current bid amount is:</h3>
-       <p>${items.bids.length - 1}</p>
+      <div class="text-center">
+      <h3>Current bid is:</h3>
+       <p>0 credits</p>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><date>${items.endsAt}</date></li>
-        <li class="list-group-item">${items.tags}</li>
-        <li class="list-group-item itemID">${items.id}</li>
+        <li class="list-group-item text-center"><div class="alert alert-danger"><h2>Ends at:</h2><date class="date">${items.endsAt}</date></div></li>
+        <li class="list-group-item primary text-center"><h2>last updated:</h2><date>${items.updated}</date></li>
+        <li class="list-group-item primary text-center"><h2>Created at:</h2><date>${items.created}</date></li>
+        <li class="list-group-item primary text-center"><h3>Tags</h3><p>${items.tags}</p></li>
+        <li class="list-group-item primary text-center itemID"><h4>seller</h4><p>${items.seller.name}</p></li>
       </ul>
+      </div>
       </div>`;
     }
     else {
       if (items.media.length >= 2) {
         for (let i = 0; i < items.media.length; i++) {
           mediaContainer.innerHTML += `<img class="imageArray m-4 img-fluid" src="${items.media[i]}" alt="Card image cap">`;
+        }
+      }
+      else {
+        for (let i = 0; i < items.media.length; i++) {
+          mediaContainer.innerHTML += `<img class="imageArray m-4 img-fluid" src="${items.media}" alt="Card image cap">`;
         }
       }
 
@@ -56,7 +70,7 @@ export async function displayItemListener() {
         <h3>Current bid is:</h3>
          <p>${items.bids[0].amount} credits</p>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item text-center"><div class="alert alert-danger"><h2>Ends at:</h2><date>${items.endsAt}</date></div></li>
+          <li class="list-group-item text-center"><div class="alert alert-danger"><h2>Ends at:</h2><date class="date">${items.endsAt}</date></div></li>
           <li class="list-group-item primary text-center"><h2>last updated:</h2><date>${items.updated}</date></li>
           <li class="list-group-item primary text-center"><h2>Created at:</h2><date>${items.created}</date></li>
           <li class="list-group-item primary text-center"><h3>Tags</h3><p>${items.tags}</p></li>

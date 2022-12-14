@@ -5,12 +5,15 @@ import * as arrayMethods from "../items/get.mjs";
 
 const url = new URL(location.href);
 const id = url.searchParams.get("id");
-
+const date = document.querySelector(".date");
 const action = "/listings/" + id + "/bids";
 const method = "POST";
 const token = load("token");
-
-
+/*
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+*/
+//console.log(today);
 
 const form = document.querySelector("#bidForm");
 
@@ -21,17 +24,18 @@ export function bidOnItemFormListener() {
             event.preventDefault();
             const form = event.target;
             const amount = parseInt(form.amount.value);
+            console.log(id);
             const item = {
                 "amount": amount
             }
-            const items = arrayMethods.getlisting(id);
+            //const items = arrayMethods.getlisting(id);
 
             if (load("credits") >= amount && amount > load("lastBid")) {
                 bid(item);
                 alert(`your bid of ${amount} credits was placed.`);
             }
             else {
-                alert(`your bid must be higher than the latest bid, you also cannot place a bid that is higher than your credit amount`)
+                alert(`your bid must be higher than the latest bid, you also cannot place a bid that is higher than your credit amount. you must also be sure that the timer has not ended`)
             }
             location.reload();
         })
