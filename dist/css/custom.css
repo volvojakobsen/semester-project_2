@@ -10758,6 +10758,17 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.primary {
+  background-color: #9cb7b4;
+}
+
 .sidebar {
   background-color: rgba(69, 80, 80, 0.6235294118);
 }
@@ -10769,6 +10780,25 @@ textarea.form-control-lg {
 .card-img {
   max-width: 800px;
   height: 100%;
+}
+
+.imageArray {
+  max-width: 100%;
+  height: auto;
+}
+
+.bidAndLog {
+  margin: 60px;
+}
+
+.bid {
+  margin: 30px;
+}
+
+@media (min-width: 573px) {
+  .listingsAndBids {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */

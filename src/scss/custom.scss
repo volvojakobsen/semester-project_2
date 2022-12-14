@@ -2,9 +2,20 @@
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-$primary: #8bdb7d;
+$primary: #9cb7b4;
 $side: #4550509f;
 $forms: #1bb9b9c4;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.primary {
+  background-color: $primary;
+}
 
 .sidebar {
   background-color: $side;
@@ -17,4 +28,26 @@ $forms: #1bb9b9c4;
 .card-img {
   max-width: 800px;
   height: 100%;
+}
+
+.imageArray {
+  max-width: 100%;
+  height: auto;
+}
+
+.bidAndLog {
+  margin: 60px;
+}
+
+.bid {
+  margin: 30px;
+}
+
+@media (min-width: 573px) {
+  .listingsAndBids {
+    display: flex;
+  }
+}
+
+@media (min-width: 1800px) {
 }
