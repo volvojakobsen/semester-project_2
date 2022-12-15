@@ -1,7 +1,6 @@
 import * as fetchItems from "../items/index.mjs";
 import { load } from "./storage/index.mjs"
 
-let limit = 21;
 
 export async function displayItems() {
   try {
@@ -10,23 +9,19 @@ export async function displayItems() {
     const searchForm = document.querySelector("#searchForm");
     const searchString = document.getElementById("searchInput").value.toLowerCase();
 
+    let limit = 21;
+
     searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
-
-
-      var filtered = items.description.filter(elements => {
-        return (elements != null && elements !== undefined && elements !== "");
-      });
-
-      const searchResult = filtered.filter(
+      const searchResult = items.filter(
         (item) =>
           item.title.toLowerCase().includes(searchString) ||
           //item.description.toLowerCase().includes(searchString) ||
           item.seller.name.toLowerCase().includes(searchString)
 
       );
-      console.log(filtered);
+
       console.log(searchString);
       listingsContainer.innerHTML = "";
       for (let i = 0; i < searchResult.length; i++) {
@@ -115,6 +110,16 @@ export async function displayItems() {
       }
 
     }
+
+    const loadMore = document.querySelector("#loadMore");
+
+    loadMore.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      limit += 20;
+
+      displayItems();
+    })
   }
   catch (error) {
     console.log(error);

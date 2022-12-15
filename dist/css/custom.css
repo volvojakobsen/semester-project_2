@@ -10872,6 +10872,25 @@ p {
   color: #000;
 }
 
+.footer {
+  border: 2px solid #000000;
+  background-color: #9cb7b4;
+  border-radius: 10px;
+}
+
+.about {
+  width: 50%;
+}
+
+.contact {
+  width: 50%;
+  border-left: 5px solid #000000;
+}
+
+.copyright {
+  border-top: 5px solid #000000;
+}
+
 @media (min-width: 573px) {
   .listingsAndBids {
     display: flex;
