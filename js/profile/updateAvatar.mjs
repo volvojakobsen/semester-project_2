@@ -19,6 +19,7 @@ export function updateAvatarFormListener() {
             console.log(imageArray)
 
             updateAvater(imageArray);
+            alert("your avatar has been updated");
             location.reload();
         })
     }

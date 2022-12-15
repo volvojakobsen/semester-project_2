@@ -26,23 +26,43 @@ export async function displayItems() {
       console.log(searchResult);
       listingsContainer.innerHTML = "";
       for (let i = 0; i < searchResult.length; i++) {
-        listingsContainer.innerHTML += `<div class="card m-3 col-3">
-        <a href="singleItem.html?id=${items[i].id}">
-            <img class="card-img-top" src="${items[i].media[0]}" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">${items[i].title}</h5>
-              <p class="card-text"></p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><date>${items[i].endsAt}</date></li>
-              <li class="list-group-item">${items[i].tags}</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-            <div class="card-body">
-            <a href="singleItem.html?id=${items[i].id}"><button type="button"  class="btn btn-primary"">View Item</button></a>
-            </div>
-            </a>
-          </div>`
+        if (items[i].seller.name === load("name")) {
+          listingsContainer.innerHTML += `<a class="noLinkDesign" href="singleItem.html?id=${items[i].id}"><div class="card card-multi m-3">
+        <img class="card-img-top listings-img img-fluid" src="${items[i].media[0]}" alt="Card image cap">
+        <div class="card-body card-top">
+          <h2 class="card-title text-center">${items[i].title}</h2>
+          <p class="card-text">${items[i].description}</p>
+        </div>
+        <h3 class="text-center">Ends at:</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><date>${items[i].endsAt}</date></li>
+          <li class="list-group-item">${items[i].tags}</li>
+        </ul>
+        <div class="card-body bottom-card d-flex flex-wrap">
+        <a href="singleItem.html?id=${items[i].id}"><button type="button" class="btn listings-buttons btn-primary">View Item</button></a>
+        <a href="updateItem.html?id=${items[i].id}" class="card-link listings-buttons"><button type="button" class="btn btn-outline-success">Update</button></a>
+        <a href="removeItem.html?id=${items[i].id}"><button type="button" class="btn listings-buttons btn-outline-danger">Delete</button></a>
+        </div>
+      </div></a>`
+        }
+        else {
+          listingsContainer.innerHTML += `<a class="noLinkDesign" href="singleItem.html?id=${items[i].id}"><div class="card card-multi m-3">
+        <img class="card-img-top listings-img img-fluid" src="${items[i].media[0]}" alt="Card image cap">
+        <div class="card-body card-top">
+          <h2 class="card-title text-center">${items[i].title}</h2>
+          <p class="card-text">${items[i].description}</p>
+        </div>
+        <h3 class="text-center">Ends at:</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><date>${items[i].endsAt}</date></li>
+          <li class="list-group-item">${items[i].tags}</li>
+        </ul>
+        <div class="card-body bottom-card d-flex flex-wrap">
+        <a href="singleItem.html?id=${items[i].id}"><button type="button" class="btn listings-buttons btn-primary">View Item</button></a>
+        </div>
+      </div></a>`
+        }
+
       }
 
     }
@@ -53,43 +73,40 @@ export async function displayItems() {
         break;
       }
       if (items[i].seller.name === load("name")) {
-        listingsContainer.innerHTML += `<div class="card m-3" style="width: 30rem;">
-            <img class="card-img-top" src="${items[i].media[0]}" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">${items[i].title}</h5>
-              <p class="card-text">${items[i].description}</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><date>${items[i].endsAt}</date></li>
-              <li class="list-group-item">${items[i].tags}</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-            <div class="card-body">
-              <a href="singleItem.html?id=${items[i].id}"><button type="button"  class="btn btn-primary"">View Item</button></a>
-              <a href="updateItem.html?id=${items[i].id}" class="card-link"><button type="button" class="btn btn-outline-success">Update</button></a>
-              <a href="removeItem.html?id=${items[i].id}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
-            </div>
-            <div><form><input type="number"></input><button type="submit">Bid</button></form></div>
-          </div>`
+        listingsContainer.innerHTML += `<a class="noLinkDesign" href="singleItem.html?id=${items[i].id}"><div class="card card-multi m-3">
+        <img class="card-img-top listings-img img-fluid" src="${items[i].media[0]}" alt="Card image cap">
+        <div class="card-body card-top">
+          <h2 class="card-title text-center">${items[i].title}</h2>
+          <p class="card-text">${items[i].description}</p>
+        </div>
+        <h3 class="text-center">Ends at:</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><date>${items[i].endsAt}</date></li>
+          <li class="list-group-item">${items[i].tags}</li>
+        </ul>
+        <div class="card-body bottom-card d-flex flex-wrap">
+        <a href="singleItem.html?id=${items[i].id}"><button type="button" class="btn listings-buttons btn-primary">View Item</button></a>
+        <a href="updateItem.html?id=${items[i].id}" class="card-link listings-buttons"><button type="button" class="btn btn-outline-success">Update</button></a>
+        <a href="removeItem.html?id=${items[i].id}"><button type="button" class="btn listings-buttons btn-outline-danger">Delete</button></a>
+        </div>
+      </div></a>`
       }
       else {
-        listingsContainer.innerHTML += `<div class="card m-3 col-3">
-        <a href="singleItem.html?id=${items[i].id}">
-            <img class="card-img-top" src="${items[i].media[0]}" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">${items[i].title}</h5>
-              <p class="card-text">${items[i].description}</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><date>${items[i].endsAt}</date></li>
-              <li class="list-group-item">${items[i].tags}</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-            <div class="card-body">
-            <a href="singleItem.html?id=${items[i].id}"><button type="button"  class="btn btn-primary"">View Item</button></a>
-            </div>
-            </a>
-          </div>`
+        listingsContainer.innerHTML += `<a class="noLinkDesign" href="singleItem.html?id=${items[i].id}"><div class="card card-multi m-3 single-card">
+        <img class="card-img-top listings-img img-fluid" src="${items[i].media[0]}" alt="Card image cap">
+        <div class="card-body card-top">
+          <h2 class="card-title text-center">${items[i].title}</h2>
+          <p class="card-text">${items[i].description}</p>
+        </div>
+        <h3 class="text-center">Ends at:</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><date>${items[i].endsAt}</date></li>
+          <li class="list-group-item">${items[i].tags}</li>
+        </ul>
+        <div class="card-body bottom-card d-flex flex-wrap">
+        <a href="singleItem.html?id=${items[i].id}"><button type="button" class="btn listings-buttons btn-primary">View Item</button></a>
+        </div>
+      </div></a>`
       }
 
     }

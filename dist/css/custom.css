@@ -5,6 +5,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo&family=Russo+One&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10765,6 +10766,39 @@ textarea.form-control-lg {
   overflow-x: hidden;
 }
 
+h1, .h1 {
+  line-height: normal;
+  font-family: "Alfa Slab One", cursive;
+}
+
+h2, .h2 {
+  line-height: normal;
+  font-family: "Russo One", sans-serif;
+}
+
+h3, .h3 {
+  line-height: normal;
+  font-family: "Russo One", sans-serif;
+}
+
+h4, .h4 {
+  line-height: normal;
+  font-family: "Russo One", sans-serif;
+}
+
+h5, .h5 {
+  line-height: normal;
+}
+
+p {
+  line-height: normal;
+  font-family: "Arvo", serif;
+}
+
+.logo {
+  font-size: clamp(1em, 1em + 10vw, 3em);
+}
+
 .primary {
   background-color: #9cb7b4;
 }
@@ -10788,16 +10822,52 @@ textarea.form-control-lg {
 }
 
 .bidAndLog {
-  margin: 60px;
+  margin-top: 60px;
+  margin-right: 5px;
 }
 
 .bid {
   margin: 30px;
 }
 
+.card-multi {
+  width: 18rem;
+  height: 50rem;
+}
+
+.card-singel {
+  width: auto;
+  margin-right: 10px;
+}
+
+.listings-buttons {
+  margin-left: 1px;
+  flex: none;
+}
+
+.listings-img {
+  max-height: 300px;
+}
+
+.bottom-card {
+  max-height: 150px;
+}
+
+.noLinkDesign {
+  text-decoration: none;
+  color: #000;
+}
+
+.noLinkDesign:hover {
+  text-decoration: none;
+  color: #000;
+}
+
 @media (min-width: 573px) {
   .listingsAndBids {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

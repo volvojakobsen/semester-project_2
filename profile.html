@@ -58,25 +58,32 @@
         </a>
       </nav>
     </header>
-    <div class="d-flex justify-content-center align-items-center">
-      <div class="col-9 col m-6">
+    <main>
+      <div class="container">
         <div
-          class="d-flex flex-column align-items-center justify-content-center"
+          class="d-flex register m-2 flex-column text-center align-items-center justify-content-center"
         >
           <h1 class="usernameHolder">username</h1>
-          <img class="profileImage" src="" alt="profile-image" />
+          <img
+            class="profileImage img-fluid imageArray"
+            src=""
+            alt="profile-image"
+          />
           <h2>Update profile avatar</h2>
-          <form id="updateProfileForm">
+          <form
+            id="updateProfileForm"
+            class="d-flex flex-column align-items-center justify-content-center"
+          >
             <input type="url" name="avatar" />
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
-          <p>email:</p>
+          <h4>email:</h4>
           <p class="emailHolder">placeholder</p>
-          <p>credits:</p>
+          <h4>credits:</h4>
           <p class="creditsHolder">placeholder</p>
         </div>
-        <div class="listings col-9 row m-6"></div>
       </div>
-    </div>
+      <div class="listings container m-6"></div>
+    </main>
   </body>
 </html>

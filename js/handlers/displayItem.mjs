@@ -61,7 +61,7 @@ export async function displayItemListener() {
 
       storage.save("lastBid", items.bids[items.bids.length - 1].amount);
 
-      listingContainer.innerHTML += `<div class="card m-1 primary">
+      listingContainer.innerHTML += `<div class="card m-1 primary card-singel">
         <div class="card-body text-center">
           <h1 class="card-title m-3">${items.title}</h1>
           <p class="card-text m-3">${items.description}</p>

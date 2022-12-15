@@ -16,7 +16,7 @@ export async function displayProfileListener() {
     creditsHolder.innerHTML = profile.credits;
     storage.save("credits", profile.credits);
     for (let i = 0; i < profile.wins.length; i++) {
-        listingsContainer.innerHTML += `<a href="singleItem.html?id=${profile.wins[i]}"><button class="btn btn-success">${profile.wins[i]}</button></a>`;
+        listingsContainer.innerHTML += `<a class="m-4" href="singleItem.html?id=${profile.wins[i]}"><button class="btn btn-success">${profile.wins[i]}</button></a>`;
     }
 
 
