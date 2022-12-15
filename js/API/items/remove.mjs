@@ -4,11 +4,7 @@ import { authFetch } from "../authFetch.mjs";
 
 const action = "/listings";
 const method = "delete";
-/**
- * passes a id to the API as a delete request.
- * @param {number} id from post array
- * @returns {Array} json response
- */
+
 export async function removeItem(id) {
     if (!id) {
         throw new Error("Delete requires a post id");
@@ -23,4 +19,4 @@ export async function removeItem(id) {
 
 
     return await response.json();
-};
+}

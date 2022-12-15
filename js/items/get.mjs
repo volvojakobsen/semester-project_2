@@ -1,7 +1,7 @@
 import { API_AUCTION_URL } from "../API/constants.mjs";
 import { authFetch } from "../API/authFetch.mjs";
 
-const listURL = "https://api.noroff.dev/api/v1/auction/listings?sort=created&sortOrder=desc&_seller=true&_bids=true&_active=true"
+const listURL = "https://api.noroff.dev/api/v1/auction/listings?sort=created&sortOrder=desc&_seller=true&_bids=true"
 const action = "/listings";
 
 export async function getListings() {

@@ -11,32 +11,13 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Auction-bay</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+        <a class="navbar-brand m-1" href="index.html"
+          ><h1 class="logo">Auction-bay</h1></a
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown"></div>
+        <div class="nav-credits d-flex">
+          <h2 class="credit">credits:</h2>
+          <h3 class="creditsHolder credit"></h3>
         </div>
         <a href="./profile.html">
           <button
@@ -47,49 +28,53 @@
             PROFILE
           </button>
         </a>
-        <a href="./login.html"
-          ><button
+        <a href="./login.html">
+          <button
             type="button"
             class="btn btn-primary btn-sm m-2"
             id="nav_login"
           >
             LOGIN
-          </button></a
-        >
+          </button>
+        </a>
       </nav>
     </header>
-    <div class="d-flex justify-content-center align-items-center">
-      <div class="middle col-9 m-6">
-        <div
-          class="register col-9 m-2 d-flex justify-content-center align-items-center"
-        >
-          <form class="reatePost" id="createItem">
-            <div class="container d-flex flex-column front-form my-3">
-              <h1 class="text-center">Write a new post</h1>
-              <label for="subject" class="form-label">Title</label>
-              <input
-                type="text"
-                name="title"
-                class="form-control form-title"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
-              <label for="endsAt" class="form-label">Ending at</label>
-              <input type="datetime-local" name="endsAt" />
-              <label for="description" class="form-label">Description</label>
-              <textarea
-                name="description"
-                id="message"
-                cols="30"
-                rows="10"
-                class="form__input form-body text_area mb-3"
-                placeholder="message"
-              ></textarea>
-              <button type="submit" class="btn mb-3 btn-primary">Submit</button>
-            </div>
-          </form>
+    <main>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="middle col-9 m-6">
+          <div
+            class="register col-9 m-2 d-flex justify-content-center align-items-center"
+          >
+            <form class="reatePost" id="createItem">
+              <div class="container d-flex flex-column front-form my-3">
+                <h1 class="text-center">Write a new post</h1>
+                <label for="subject" class="form-label">Title</label>
+                <input
+                  type="text"
+                  name="title"
+                  class="form-control form-title"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <label for="endsAt" class="form-label">Ending at</label>
+                <input type="datetime-local" name="endsAt" />
+                <label for="description" class="form-label">Description</label>
+                <textarea
+                  name="description"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  class="form__input form-body text_area mb-3"
+                  placeholder="message"
+                ></textarea>
+                <button type="submit" class="btn mb-3 btn-primary">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

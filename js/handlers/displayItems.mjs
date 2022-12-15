@@ -13,17 +13,21 @@ export async function displayItems() {
     searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      //items.filter(n => n == 0 || n).length)
 
-      const searchResult = items.filter(
-        (items) =>
-          items.title.toLowerCase().includes(searchString) ||
-          //items.description.toLowerCase().includes(searchString) ||
-          items.seller.name.toLowerCase().includes(searchString)
+
+      var filtered = items.description.filter(elements => {
+        return (elements != null && elements !== undefined && elements !== "");
+      });
+
+      const searchResult = filtered.filter(
+        (item) =>
+          item.title.toLowerCase().includes(searchString) ||
+          //item.description.toLowerCase().includes(searchString) ||
+          item.seller.name.toLowerCase().includes(searchString)
 
       );
-      console.log(searchString)
-      console.log(searchResult);
+      console.log(filtered);
+      console.log(searchString);
       listingsContainer.innerHTML = "";
       for (let i = 0; i < searchResult.length; i++) {
         if (items[i].seller.name === load("name")) {
@@ -64,6 +68,7 @@ export async function displayItems() {
         }
 
       }
+      console.log(searchResult);
 
     }
     )

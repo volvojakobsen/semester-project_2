@@ -10799,6 +10799,15 @@ p {
   font-size: clamp(1em, 1em + 10vw, 3em);
 }
 
+.credit {
+  color: rgb(255, 255, 255);
+  margin-right: 1rem;
+}
+
+.nav-credits {
+  border: rgb(255, 255, 255), solid, 5px;
+}
+
 .primary {
   background-color: #9cb7b4;
 }
