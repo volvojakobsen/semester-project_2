@@ -16,8 +16,6 @@ export function updateAvatarFormListener() {
             const form = event.target;
             const formData = new FormData(form);
             const imageArray = Object.fromEntries(formData.entries());
-            console.log(imageArray)
-
             updateAvater(imageArray);
             alert("your avatar has been updated");
             location.reload();

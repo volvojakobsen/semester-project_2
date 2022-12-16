@@ -1,8 +1,6 @@
 import { login } from "../api/auth/login.mjs";
 
-/**
- * listens to the login form and passes values on submit to login function.
- */
+
 export function setLoginFormListener() {
     const form = document.querySelector("#login_form");
 

@@ -14,19 +14,3 @@ export async function getProfile() {
 
     return await response.json();
 };
-/*
-export async function getProfile(id) {
-    if (!id) {
-        throw new Error("get requires a listings id");
-    }
-
-    const getItemURL = `${API_AUCTION_URL}${action}/${id}?sort=created&sortOrder=desc&_seller=true&_bids=true`;
-
-    const response = await authFetch(getItemURL)
-
-
-    return await response.json();
-};
-
-*/
-

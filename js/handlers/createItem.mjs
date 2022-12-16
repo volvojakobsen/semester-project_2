@@ -1,8 +1,6 @@
 import { createItem } from "../API/items/create.mjs";
 
-/**
- * passes user input values from post form to a fetch function, and redirects user to posts page.
- */
+
 export function setCreateItemFormListener() {
     const form = document.querySelector("#createItem");
 

@@ -4,11 +4,7 @@ import { authFetch } from "../authFetch.mjs";
 
 const action = "/listings";
 const method = "put";
-/**
- * sends the user-input from update-post form to API as a put request.
- * @param {string} postData from input fields in form.
- * @returns {Array} json response.
- */
+
 export async function updateItem(item) {
     if (!item.id) {
         throw new Error("Update requires a post id");

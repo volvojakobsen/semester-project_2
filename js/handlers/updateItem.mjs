@@ -1,9 +1,7 @@
 import { updateItem } from "../API/items/update.mjs";
-import { getlisting, getListings } from "../items/get.mjs";
+import { getlisting } from "../items/get.mjs";
 
-/**
- * listens for submit event on update post form. then passes input values to update-post function and redirects user.
- */
+
 export async function setUpdateItemListener() {
     const form = document.querySelector("#updateItem");
 

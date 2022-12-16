@@ -10766,6 +10766,13 @@ textarea.form-control-lg {
   overflow-x: hidden;
 }
 
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 h1, .h1 {
   line-height: normal;
   font-family: "Alfa Slab One", cursive;

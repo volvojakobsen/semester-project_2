@@ -1,9 +1,7 @@
 import { getlisting } from "../items/get.mjs";
 import { removeItem } from "../API/items/remove.mjs";
 
-/**
- * listens for submit on delete post form. then passes values to delete function, and redirects user.
- */
+
 export async function setDeleteItemListener() {
     const form = document.querySelector("#deleteItem");
 

@@ -40,14 +40,14 @@
       </nav>
     </header>
     <main>
-      <div class="d-flex justify-content-center align-items-center">
+      <div class="d-flex m-2 justify-content-center align-items-center">
         <div
           class="register col-9 m-2 d-flex justify-content-center align-items-center"
         >
           <form action="./profile.html" id="register_form" method="post">
             <div
-              class="mb-3 d-flex text-center flex-column align-items-center"
-              style="height: 80vh"
+              class="mb-3 d-flex text-center flex-column justify-content-center align-items-center"
+              style="height: 70vh"
             >
               <h1>Please register</h1>
               <p class="my-1">username must be at least 8 characters long</p>
@@ -81,8 +81,8 @@
                   class="form-control register_email"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
-                  pattern="^[\w\-.]+@(stud.)?noroff.no$"
-                  title="Only @(stud)noroff.no are allowed to register."
+                  pattern="^[\w\-.]+@stud.noroff.no$"
+                  title="Only @stud.noroff.no are allowed to register."
                   placeholder="Email"
                   required
                 />
@@ -110,5 +110,24 @@
         </div>
       </div>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="about text-center">
+            <h5>About</h5>
+            <p>
+              register with your noroff student mail today and get 1000 credits
+              to bid on items. or put something up for auction.
+            </p>
+          </div>
+          <div class="contact text-center">
+            <h5>contact</h5>
+            <p>support@fake-auction.se</p>
+            <p>phone: 555-40-FAKE</p>
+          </div>
+        </div>
+        <p class="copyright text-center m-1">Copyright © 2022 Auction-bay</p>
+      </div>
+    </footer>
   </body>
 </html>

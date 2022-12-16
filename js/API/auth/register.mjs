@@ -3,11 +3,7 @@ import * as storage from "../../handlers/storage/index.mjs";
 
 const action = "/auth/register";
 const method = "post";
-/**
- * sends register info to API. then waiting for response.
- * @param {string} profile from input-fields in form.
- * @returns {Array} the jason response as "result"
- */
+
 export async function register(profile) {
     const registerURL = API_AUCTION_URL + action;
 

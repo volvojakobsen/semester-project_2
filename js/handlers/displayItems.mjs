@@ -17,12 +17,11 @@ export async function displayItems() {
       const searchResult = items.filter(
         (item) =>
           item.title.toLowerCase().includes(searchString) ||
-          //item.description.toLowerCase().includes(searchString) ||
           item.seller.name.toLowerCase().includes(searchString)
 
       );
 
-      console.log(searchString);
+
       listingsContainer.innerHTML = "";
       for (let i = 0; i < searchResult.length; i++) {
         if (items[i].seller.name === load("name")) {
@@ -63,7 +62,7 @@ export async function displayItems() {
         }
 
       }
-      console.log(searchResult);
+
 
     }
     )
@@ -122,7 +121,9 @@ export async function displayItems() {
     })
   }
   catch (error) {
-    console.log(error);
+    listingsContainer.innerHTML = `<div class="alert alert-danger" role="alert">
+    something whent wrong. the server may be down, please try again later.
+  </div>`
   }
 }
 

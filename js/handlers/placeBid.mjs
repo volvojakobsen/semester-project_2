@@ -1,7 +1,6 @@
 import { load } from "./storage/index.mjs";
 import { API_AUCTION_URL } from "../API/constants.mjs";
 import { authFetch } from "../API/authFetch.mjs";
-import * as arrayMethods from "../items/get.mjs";
 
 const url = new URL(location.href);
 const id = url.searchParams.get("id");
@@ -9,11 +8,7 @@ const date = document.querySelector(".date");
 const action = "/listings/" + id + "/bids";
 const method = "POST";
 const token = load("token");
-/*
-const today = new Date();
-today.setHours(0, 0, 0, 0);
-*/
-//console.log(today);
+
 
 const form = document.querySelector("#bidForm");
 
@@ -28,7 +23,7 @@ export function bidOnItemFormListener() {
             const item = {
                 "amount": amount
             }
-            //const items = arrayMethods.getlisting(id);
+
 
             if (load("credits") >= amount && amount > load("lastBid")) {
                 bid(item);

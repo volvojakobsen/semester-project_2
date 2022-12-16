@@ -6,9 +6,7 @@ const listingContainer = document.querySelector(".listings");
 const mediaContainer = document.querySelector(".media");
 const inputContainer = document.querySelector(".bidInput");
 const bidsContainer = document.querySelector(".bidsContainer");
-/**
- * Takes an id from the querystring and fetches a single post with the id
- */
+
 export async function displayItemListener() {
   try {
     const url = new URL(location.href);
