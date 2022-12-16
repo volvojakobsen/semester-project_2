@@ -19,7 +19,7 @@ export function setCreateItemFormListener() {
             }
             createItem(item);
             alert("your item has been listed for auction.");
-            location.href = `/`;
+            location.href = `/index.html`;
         })
     }
 

@@ -28,7 +28,7 @@ export async function setUpdateItemListener() {
             item.id = id;
             updateItem(item);
             alert("your post has been updated.");
-            location.href = `/`
+            location.href = `/semester-project_2/index.html`
         })
     }
 
