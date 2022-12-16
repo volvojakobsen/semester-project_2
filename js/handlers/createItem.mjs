@@ -14,7 +14,6 @@ export function setCreateItemFormListener() {
             const media = formData.get('media').split(', ');
             const endsAt = formData.get('endsAt');
             let item = { title, description, media, endsAt };
-            let item2 = { title, description, endsAt }
             if (form.media.value.length === 0) {
                 delete item.media;
                 console.log("deleted");

@@ -22,13 +22,19 @@ export async function setUpdateItemListener() {
             const description = formData.get('description');
             const media = formData.get('media').split(', ');
             const item = { title, description, media }
-            if (item.media === "") {
-                delete item.media
+            if (form.media.value.length === 0) {
+                delete item.media;
             }
             item.id = id;
             updateItem(item);
             alert("your post has been updated.");
-            location.href = `/semester-project_2/index.html`
+            if (location.pathname === "/semester-project_2/updateItem.html") {
+                location.href = `https://volvojakobsen.github.io/semester-project_2/`;
+            }
+            if (location.pathname === "/updateItem.html") {
+                location.href = `/index.html`;
+            }
+
         })
     }
 

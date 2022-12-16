@@ -27,7 +27,12 @@ export async function setDeleteItemListener() {
             item.id = id;
             removeItem(cleanID);
             alert("the item has been deleted");
-            location.href = `/`;
+            if (location.pathname === "/semester-project_2/removeItem.html") {
+                location.href = `https://volvojakobsen.github.io/semester-project_2/`;
+            }
+            if (location.pathname === "/removeItem.html") {
+                location.href = `/index.html`;
+            }
         })
     }
 
