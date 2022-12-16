@@ -1,4 +1,4 @@
-import { register } from "../api/auth/register.mjs";
+import { register } from "../API/auth/register.mjs";
 
 
 export function setRegisterFormListener() {
