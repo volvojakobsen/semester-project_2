@@ -10,10 +10,9 @@ export function setCreateItemFormListener() {
             const form = event.target;
             const formData = new FormData(form);
             const item = Object.fromEntries(formData.entries());
-            console.log(item)
             createItem(item);
             alert("your item has been listed for auction.");
-            location.href = `/`;
+            location.href = `/semester-project_2/index.html`;
         })
     }
 
