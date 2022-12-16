@@ -3,7 +3,7 @@ import * as profileMethod from "../profile/profile.mjs";
 
 const usernameHolder = document.querySelector(".usernameHolder");
 const emailHolder = document.querySelector(".emailHolder");
-const creditsHolder = document.querySelector(".creditsHolder");
+const creditsHolder = document.querySelectorAll(".creditsHolder");
 const listingsContainer = document.querySelector(".listings");
 const profileHulder = document.querySelector(".profileImage");
 
