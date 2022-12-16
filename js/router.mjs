@@ -4,9 +4,13 @@ import * as profileListeners from "./profile/index.mjs";
 
 export default function router() {
     const path = location.pathname;
+    console.log(path);
 
     switch (path) {
-        case `/semester-project_2`:
+        case `/index.html`:
+        case `/`:
+        case `/semester-project_2/`:
+        case `/semester-project_2/index.html`:
             listeners.displayItems()
             listeners.isUserLoggedIn()
 
