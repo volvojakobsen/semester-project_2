@@ -6,42 +6,42 @@ export default function router() {
     const path = location.pathname;
 
     switch (path) {
-        case ``:
+        case `/semester-project_2`:
             listeners.displayItems()
             listeners.isUserLoggedIn()
 
             return;
-        case `/register.html`:
+        case `/semester-project_2/register.html`:
             listeners.setRegisterFormListener()
             listeners.isUserLoggedIn()
             return;
-        case `login.html`:
+        case `/semester-project_2/login.html`:
             listeners.setLoginFormListener()
             listeners.isUserLoggedIn()
             return;
-        case `createItem.html`:
+        case `/semester-project_2/createItem.html`:
             listeners.setCreateItemFormListener()
             listeners.isUserLoggedIn()
             return;
-        case `updateItem.html`:
+        case `/semester-project_2/updateItem.html`:
             listeners.setUpdateItemListener()
             listeners.isUserLoggedIn()
             return;
-        case `removeItem.html`:
+        case `/semester-project_2/removeItem.html`:
             listeners.setDeleteItemListener()
             listeners.isUserLoggedIn()
             return;
-        case `singleItem.html`:
+        case `/semester-project_2/singleItem.html`:
             listeners.displayItemListener()
             listeners.bidOnItemFormListener()
             listeners.isUserLoggedIn()
             return;
-        case `profile.html`:
+        case `/semester-project_2/profile.html`:
             listeners.displayProfileListener()
             listeners.isUserLoggedIn()
             profileListeners.updateAvatarFormListener()
             return;
-        case `index.html`:
+        case `/semester-project_2/index.html`:
             listeners.displayItems()
             listeners.isUserLoggedIn()
             return;
