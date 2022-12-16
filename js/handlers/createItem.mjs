@@ -19,11 +19,16 @@ export function setCreateItemFormListener() {
                 delete item.media;
                 console.log("deleted");
             }
-            console.log(location.pathname)
-
+            console.log(location.pathname);
             createItem(item);
             alert("your item has been listed for auction.");
-            location.href = `/semester-project_2/index.html`;
+            if (location.pathname === "/semester-project_2/createItem.html") {
+                location.href = `https://volvojakobsen.github.io/semester-project_2/`;
+            }
+            if (location.pathname === "/createItem.html") {
+                location.href = `/index.html`;
+            }
+
         })
     }
 
