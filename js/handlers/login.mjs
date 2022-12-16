@@ -1,4 +1,4 @@
-import { login } from "../api/auth/login.mjs";
+import { login } from "../API/auth/login.mjs";
 
 
 export function setLoginFormListener() {
