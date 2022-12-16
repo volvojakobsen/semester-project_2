@@ -78,7 +78,7 @@ export async function displayItemListener() {
         </div>`;
 
       const placeholder = parseInt(items.bids[items.bids.length - 1].amount) + 1;
-      console.log(placeholder);
+
 
 
       for (let i = 0; i < items.bids.length; i++) {
