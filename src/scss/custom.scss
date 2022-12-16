@@ -156,5 +156,8 @@ p {
   }
 }
 
-@media (min-width: 1800px) {
+@media (max-width: 384px) {
+  .logo {
+    font-size: 2rem;
+  }
 }

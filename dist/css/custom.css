@@ -10905,5 +10905,10 @@ p {
     justify-content: center;
   }
 }
+@media (max-width: 384px) {
+  .logo {
+    font-size: 2rem;
+  }
+}
 
 /*# sourceMappingURL=custom.css.map */
