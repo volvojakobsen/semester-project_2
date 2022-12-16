@@ -40,32 +40,55 @@
       </nav>
     </header>
     <main>
-      <div class="container">
-        <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand">Listings Menu</a>
-          <a href="createItem.html"
-            ><button type="button" class="btn btn-outline-success">
-              New entry
-            </button></a
-          >
-          <form class="form-inline" id="searchForm">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              id="searchInput"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
+      <div class="d-flex justify-content-center align-items-center">
+        <div
+          class="register container m-2 d-flex justify-content-center align-items-center"
+        >
+          <form id="login_form">
+            <div
+              class="mb-3 d-flex flex-column justify-content-center align-items-center"
+              style="height: 70vh"
+            >
+              <h1>please login</h1>
+              <div
+                class="d-flex my-3 col-7 align-items-center justify-content-center"
+              >
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <p class="my-1 text-center">
+                password must be at least 8 characters long
+              </p>
+              <div class="d-flex my-1 col-7">
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  minlength="8"
+                  aria-describedby="passwordHelp"
+                  placeholder="password"
+                  required
+                />
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="./register.html"
+                  ><button type="button" class="btn btn-outline-primary">
+                    Register
+                  </button></a
+                >
+              </div>
+            </div>
           </form>
-        </nav>
-        <div class="listings d-flex align-items-center flex-wrap m-6"></div>
-        <div class="load-button d-flex justify-content-center m-2">
-          <button class="btn btn-primary" id="loadMore">
-            Load more results
-          </button>
         </div>
       </div>
     </main>

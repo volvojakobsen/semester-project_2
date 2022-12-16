@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/css/custom.css" />
+    <script src="./js/index.mjs" type="module" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand m-1" href="index.html"
+          ><h1 class="logo">Auction-bay</h1></a
+        >
+        <div class="collapse navbar-collapse" id="navbarNavDropdown"></div>
+        <div class="nav-credits d-flex">
+          <h2 class="credit">credits:</h2>
+          <h3 class="creditsHolder credit"></h3>
+        </div>
+        <a href="./profile.html">
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm"
+            id="nav_profile"
+          >
+            PROFILE
+          </button>
+        </a>
+        <a href="./login.html">
+          <button
+            type="button"
+            class="btn btn-primary btn-sm m-2"
+            id="nav_login"
+          >
+            LOGIN
+          </button>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <div class="d-flex m-2 justify-content-center align-items-center">
+        <div
+          class="register col-9 m-2 d-flex justify-content-center align-items-center"
+        >
+          <form action="./profile.html" id="register_form" method="post">
+            <div
+              class="mb-3 d-flex text-center flex-column justify-content-center align-items-center"
+              style="height: 70vh"
+            >
+              <h1>Please register</h1>
+              <p class="my-1">username must be at least 8 characters long</p>
+              <div
+                class="d-flex my-3 align-items-center justify-content-center"
+                style="width: 50%"
+              >
+                <input
+                  type="name"
+                  name="name"
+                  pattern="^[\w]+$"
+                  title="User name must only contain lower case and upper case letters, numbers and underscore (_). Example: My_user123. The username must also be at least 8 characters long."
+                  class="form-control register_username"
+                  id="exampleUserName"
+                  aria-describedby="emailHelp"
+                  minlength="8"
+                  placeholder="username"
+                  required
+                />
+              </div>
+              <p class="my-1">
+                email must be a valid noroff student mail address
+              </p>
+              <div
+                class="d-flex my-3 align-items-center justify-content-center"
+                style="width: 50%"
+              >
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control register_email"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  pattern="^[\w\-.]+@stud.noroff.no$"
+                  title="Only @stud.noroff.no are allowed to register."
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <p class="my-1">password must be at least 8 characters long</p>
+              <div class="d-flex my-1" style="width: 50%">
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control register_password"
+                  id="exampleInputPassword1"
+                  minlength="8"
+                  aria-describedby="passwordHelp"
+                  placeholder="password"
+                  required
+                />
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary register_submit">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="about text-center">
+            <h5>About</h5>
+            <p>
+              register with your noroff student mail today and get 1000 credits
+              to bid on items. or put something up for auction.
+            </p>
+          </div>
+          <div class="contact text-center">
+            <h5>contact</h5>
+            <p>support@fake-auction.se</p>
+            <p>phone: 555-40-FAKE</p>
+          </div>
+        </div>
+        <p class="copyright text-center m-1">Copyright © 2022 Auction-bay</p>
+      </div>
+    </footer>
+  </body>
+</html>

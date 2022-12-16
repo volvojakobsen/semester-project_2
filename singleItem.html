@@ -40,34 +40,24 @@
       </nav>
     </header>
     <main>
-      <div class="container">
-        <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand">Listings Menu</a>
-          <a href="createItem.html"
-            ><button type="button" class="btn btn-outline-success">
-              New entry
-            </button></a
-          >
-          <form class="form-inline" id="searchForm">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              id="searchInput"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
-        </nav>
-        <div class="listings d-flex align-items-center flex-wrap m-6"></div>
-        <div class="load-button d-flex justify-content-center m-2">
-          <button class="btn btn-primary" id="loadMore">
-            Load more results
-          </button>
+      <div class="container mx-auto bid register">
+        <div class="mx-auto listingsAndBids">
+          <div class="listings"></div>
+          <div class="bidAndLog text-center">
+            <div class="bid d-flex flex-column justify-content-center align-items-center">
+              <h3 class="">Place a bid on this item</h3>
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <form id="bidForm"><input class="bidInput" name="amount" type="number"></input><button type="submit" class="btn btn-lg btn-primary">Bid</button></form>
+              </div>
+            </div>
+            <div class="bidsLog">
+              <h4>Biding Log</h4>
+            <div><ul class="bidsContainer"></ul></div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="media d-flex flex-wrap justify-content-center align-items-center"></div>
     </main>
     <footer class="footer">
       <div class="container">

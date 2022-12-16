@@ -40,32 +40,33 @@
       </nav>
     </header>
     <main>
-      <div class="container">
-        <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand">Listings Menu</a>
-          <a href="createItem.html"
-            ><button type="button" class="btn btn-outline-success">
-              New entry
-            </button></a
-          >
-          <form class="form-inline" id="searchForm">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              id="searchInput"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
+      <div class="container d-flex justify-content-center align-items-center">
+        <div
+          class="register col-9 m-2 d-flex justify-content-center align-items-center"
+        >
+          <form class="reatePost" id="updateItem">
+            <div class="container d-flex flex-column front-form my-3">
+              <h1 class="text-center">Write a new post</h1>
+              <label for="subject" class="form-label">Title</label>
+              <input
+                type="text"
+                name="title"
+                class="form-control form-title"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+              <label for="description" class="form-label">Description</label>
+              <textarea
+                name="description"
+                id="message"
+                cols="30"
+                rows="10"
+                class="form__input form-body text_area mb-3"
+                placeholder="message"
+              ></textarea>
+              <button type="submit" class="btn mb-3 btn-primary">Submit</button>
+            </div>
           </form>
-        </nav>
-        <div class="listings d-flex align-items-center flex-wrap m-6"></div>
-        <div class="load-button d-flex justify-content-center m-2">
-          <button class="btn btn-primary" id="loadMore">
-            Load more results
-          </button>
         </div>
       </div>
     </main>
