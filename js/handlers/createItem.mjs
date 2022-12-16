@@ -13,13 +13,13 @@ export function setCreateItemFormListener() {
             const description = formData.get('description');
             const media = formData.get('media').split(', ');
             const endsAt = formData.get('endsAt');
-            const item = { title, description, media, endsAt }
+            let item = { title, description, media, endsAt }
             if (item.media === "") {
                 delete item.media
             }
             createItem(item);
             alert("your item has been listed for auction.");
-            location.href = `/index.html`;
+            location.href = `/semester-project_2/index.html`;
         })
     }
 
