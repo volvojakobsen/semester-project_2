@@ -65,9 +65,12 @@
                   class="form-control form-title"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
+                  required
                 />
                 <label for="endsAt" class="form-label">Ending at</label>
-                <input type="datetime-local" name="endsAt" />
+                <input type="datetime-local" name="endsAt" required />
+                <label for="media" class="form-label">Media</label>
+                <input type="url" name="media" />
                 <label for="description" class="form-label">Description</label>
                 <textarea
                   name="description"

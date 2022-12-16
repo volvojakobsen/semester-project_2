@@ -9,10 +9,17 @@ export function setCreateItemFormListener() {
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
-            const item = Object.fromEntries(formData.entries());
+            const title = formData.get('title');
+            const description = formData.get('description');
+            const media = formData.get('media').split(', ');
+            const endsAt = formData.get('endsAt');
+            const item = { title, description, media, endsAt }
+            if (item.media === "") {
+                delete item.media
+            }
             createItem(item);
             alert("your item has been listed for auction.");
-            location.href = `/semester-project_2/index.html`;
+            location.href = `/`;
         })
     }
 

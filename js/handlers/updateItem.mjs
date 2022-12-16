@@ -18,7 +18,13 @@ export async function setUpdateItemListener() {
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
-            const item = Object.fromEntries(formData.entries());
+            const title = formData.get('title');
+            const description = formData.get('description');
+            const media = formData.get('media').split(', ');
+            const item = { title, description, media }
+            if (item.media === "") {
+                delete item.media
+            }
             item.id = id;
             updateItem(item);
             alert("your post has been updated.");
