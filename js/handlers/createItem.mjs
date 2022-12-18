@@ -16,9 +16,7 @@ export function setCreateItemFormListener() {
             let item = { title, description, media, endsAt };
             if (form.media.value.length === 0) {
                 delete item.media;
-                console.log("deleted");
             }
-            console.log(location.pathname);
             createItem(item);
             alert("your item has been listed for auction.");
             if (location.pathname === "/semester-project_2/createItem.html") {

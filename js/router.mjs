@@ -4,7 +4,6 @@ import * as profileListeners from "./profile/index.mjs";
 
 export default function router() {
     const path = location.pathname;
-    console.log(path);
 
     switch (path) {
         case `/index.html`:

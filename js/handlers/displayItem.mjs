@@ -12,7 +12,6 @@ export async function displayItemListener() {
     const url = new URL(location.href);
     const id = url.searchParams.get("id");
     const items = await postMethods.getlisting(id);
-    console.log(items.title)
 
 
     if (items.bids.length === 0) {
@@ -87,8 +86,6 @@ export async function displayItemListener() {
 
       inputContainer.innerHTML = placeholder;
     }
-
-    // mediaContainer.innerHTML += `<img class="card-img" src="${items.media}" alt="Card image cap"></img>`;
 
 
 
