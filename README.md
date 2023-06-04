@@ -13,6 +13,6 @@ https://volvojakobsen.github.io/semester-project_2/index.html
 
 # instalation
 
--download the project
--in vsc terminal run command: npm -i
--open project in live server
+- download the project
+- in vsc terminal run command: npm -i
+- open project in live server or visit: https://volvojakobsen.github.io/semester-project_2/index.html
