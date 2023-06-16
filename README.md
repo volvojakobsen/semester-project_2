@@ -1,4 +1,6 @@
-## semester-project_2
+# semester-project_2
+
+![image](https://github.com/volvojakobsen/portfolio/blob/main/images/semester-p-2.png)
 
 a fake auction site for my third semester at noroff.
 
